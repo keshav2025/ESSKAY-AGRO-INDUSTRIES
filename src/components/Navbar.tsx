@@ -39,11 +39,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
   <div className="w-40 h-14 relative">
     <img src={logo} alt="Esskay Agro Logo" className="object-contain w-full h-full" />
   </div>
-  <div className="text-primary-green  leading-tight">
-    <h1 className="font-bold text-lg font-montserrat">
+  <div className="text-[#01bf62]  leading-tight">
+    <h1 className="font-bold text-medium font-montserrat">
       ESSKAY AGRO
       <br />
-      <span className="text-sm font-medium tracking-wide">INDUSTRIES</span>
+      <span className="text-sm text-black font-medium tracking-wide">INDUSTRIES</span>
     </h1>
   </div>
 </div>
