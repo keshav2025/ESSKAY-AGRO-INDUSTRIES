@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Factory, Menu, X, ChevronDown } from 'lucide-react';
+import logo from '../components/assests/logo1.png'
 
 interface NavbarProps {
   activeSection: string;
@@ -31,19 +32,22 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setActiveSection('home')}>
-            <div className="relative">
-              <Factory className="h-8 w-8 text-primary-green" />
-              <div className="absolute -bottom-1 left-0 right-0 h-1 bg-primary-green rounded-full"></div>
-            </div>
-            <div className="text-primary-green">
-              <h1 className="font-montserrat font-bold text-lg leading-tight">
-                ESSKAY AGRO<br />
-                <span className="text-sm font-medium">INDUSTRIES</span>
-              </h1>
-            </div>
-          </div>
+        <div
+  className="flex items-center space-x-2 cursor-pointer"
+  onClick={() => setActiveSection('home')}
+>
+  <div className="w-40 h-14 relative">
+    <img src={logo} alt="Esskay Agro Logo" className="object-contain w-full h-full" />
+  </div>
+  <div className="text-primary-green  leading-tight">
+    <h1 className="font-bold text-lg font-montserrat">
+      ESSKAY AGRO
+      <br />
+      <span className="text-sm font-medium tracking-wide">INDUSTRIES</span>
+    </h1>
+  </div>
+</div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">

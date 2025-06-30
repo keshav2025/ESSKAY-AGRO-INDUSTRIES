@@ -73,14 +73,14 @@ const Hero: React.FC = () => {
               <div className="flex justify-center mb-4">
                 <Users className="h-12 w-12 text-primary-green" />
               </div>
-              <h3 className="font-montserrat font-bold text-3xl text-primary-green mb-2">500+</h3>
+              <h3 className="font-montserrat font-bold text-3xl text-primary-green mb-2">100+</h3>
               <p className="font-opensans text-gray-600">Satisfied Clients</p>
             </div>
             <div className="text-center">
               <div className="flex justify-center mb-4">
                 <Truck className="h-12 w-12 text-primary-green" />
               </div>
-              <h3 className="font-montserrat font-bold text-3xl text-primary-green mb-2">1000+</h3>
+              <h3 className="font-montserrat font-bold text-3xl text-primary-green mb-2">50+</h3>
               <p className="font-opensans text-gray-600">Products Delivered</p>
             </div>
             <div className="text-center">
