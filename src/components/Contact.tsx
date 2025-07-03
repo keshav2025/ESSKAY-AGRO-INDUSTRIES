@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
         'Khasra No. 111, Karala Majria',
         'Majri Road - 110081',
         'Delhi, India',
-        <span key="gst"><strong>GSTIN:</strong> 07ABCDE1234F1Z5</span>
+        <span key="gst"><strong>GSTIN:</strong> 07AUWPS3407R2ZJ</span>
       ]
     },
   

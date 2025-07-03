@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
     <strong>ESSKAY AGRO INDUSTRIES</strong><br />
     Khasra No. 111, Karala Majri,<br />
     Majri Road, Delhi - 110081<br />
-    <strong>GSTIN:</strong> 07ABCDE1234F1Z5
+    <strong>GSTIN:</strong> 07AUWPS3407R2ZJ
   </span>
 </div>
 

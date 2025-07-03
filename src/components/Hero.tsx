@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = ({ setActiveSection }) => {
               <div className="flex justify-center mb-4">
                 <Truck className="h-12 w-12 text-primary-green" />
               </div>
-              <h3 className="font-montserrat font-bold text-3xl text-primary-green mb-2">50+</h3>
+              <h3 className="font-montserrat font-bold text-3xl text-primary-green mb-2">100+</h3>
               <p className="font-opensans text-gray-600">Products Delivered</p>
             </div>
             <div className="text-center">
