@@ -4,33 +4,35 @@ import Highlights from './Highlights';
 import Testimonials from './Testimonials';
 import News from './News';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  setActiveSection: (section: string) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ setActiveSection }) => {
   return (
     <div className="bg-primary-offwhite">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0 overflow-hidden">
-  <video
-    className="w-full h-full object-cover transition-all duration-700 ease-in-out filter"
-    autoPlay
-    loop
-    muted
-    playsInline
-    style={{
-      filter: 'brightness(1.1) contrast(1.25) saturate(1.4)',
-    }}
-  >
-    <source
-      src="https://videos.pexels.com/video-files/2758322/2758322-uhd_2560_1440_30fps.mp4"
-      type="video/mp4"
-    />
-    Your browser does not support the video tag.
-  </video>
-  <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-</div>
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video
+            className="w-full h-full object-cover transition-all duration-700 ease-in-out filter"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              filter: 'brightness(1.1) contrast(1.25) saturate(1.4)',
+            }}
+          >
+            <source
+              src="https://videos.pexels.com/video-files/2758322/2758322-uhd_2560_1440_30fps.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
 
-
-        
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="font-montserrat font-bold text-5xl md:text-7xl mb-6 leading-tight">
             Leading Agricultural
@@ -40,11 +42,17 @@ const Hero: React.FC = () => {
             Comprehensive agricultural solutions for modern farming, processing, and sustainable agriculture practices
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary-green text-white px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200 flex items-center justify-center space-x-2">
+            <button
+              onClick={() => setActiveSection('products')}
+              className="bg-primary-green text-white px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200 flex items-center justify-center space-x-2"
+            >
               <span>Explore Products</span>
               <ArrowRight className="h-5 w-5" />
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-white hover:text-primary-green transition-colors duration-200">
+            <button
+              onClick={() => setActiveSection('contact')}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-white hover:text-primary-green transition-colors duration-200"
+            >
               Contact Us
             </button>
           </div>
@@ -95,7 +103,6 @@ const Hero: React.FC = () => {
       </section>
 
       <Highlights />
-      <Testimonials />
       <News />
     </div>
   );

@@ -4,25 +4,25 @@ import { Calendar, ArrowRight } from 'lucide-react';
 const News: React.FC = () => {
   const newsItems = [
     {
-      title: 'New Processing Plant Inaugurated in Maharashtra',
-      excerpt: 'ESSKAY AGRO expands its manufacturing capabilities with a state-of-the-art processing facility.',
-      date: '2024-01-15',
-      category: 'Company News',
-      image: 'https://images.pexels.com/photos/5834/nature-grass-leaf-green.jpg'
+      title: "India's Summer Sowing 2025: Record Increase in Crop Area",
+      excerpt: "The area under summer crops in India has increased by 6.5 lakh hectares over last year, with rice and pulses seeing the biggest gains.",
+      date: "2025-03-12",
+      category: "Crop Trends",
+      image: "https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg" // Indian rice field
     },
     {
-      title: 'Partnership with Leading Agricultural Universities',
-      excerpt: 'Collaborative research initiatives to develop next-generation farming technologies.',
-      date: '2024-01-10',
-      category: 'Innovation',
-      image: 'https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg'
+      title: "ICAR to Launch Two Genome Edited Rice Varieties",
+      excerpt: "The Indian Council of Agricultural Research is set to launch two new rice varieties developed using genome editing, promising higher yields and climate resilience.",
+      date: "2025-05-04",
+      category: "Innovation",
+      image: "https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg" // Scientist in field
     },
     {
-      title: 'Sustainable Agriculture Awards 2024',
-      excerpt: 'Recognition for our commitment to environmental sustainability and innovative farming solutions.',
-      date: '2024-01-05',
-      category: 'Awards',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg'
+      title: "AI and Technology Transforming Indian Farms",
+      excerpt: "Indian farmers are increasingly adopting AI-powered tools for efficient water, fertilizer, and pest management, boosting productivity and sustainability.",
+      date: "2025-02-07",
+      category: "Technology",
+      image: "https://images.pexels.com/photos/5029856/pexels-photo-5029856.jpeg" // Smart farming/AI
     }
   ];
 
@@ -90,9 +90,7 @@ const News: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-primary-green text-white px-8 py-3 rounded-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200">
-            View All News
-          </button>
+         
         </div>
       </div>
     </section>

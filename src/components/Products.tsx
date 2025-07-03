@@ -1,8 +1,20 @@
 import React, { useState } from 'react';
 import { Search, Filter, Download, Phone, Mail } from 'lucide-react';
-import preclenner from '../components/assests/Screenshot 2025-06-30 at 11.45.53 AM.png';
-import img2 from '../components/assests/Screenshot 2025-06-30 at 11.47.54 AM.png';
-import img01 from '../components/assests/img01.png';
+import preclenner from '../components/assests/Screenshot 2025-06-30 at 11.45.53 AM.png';
+import img2 from '../components/assests/Screenshot 2025-06-30 at 11.47.54 AM.png';
+import img01 from '../components/assests/new1.jpeg';
+import finecleaner from '../components/assests/new2.jpeg'
+import stopesepertor from '../components/assests/new3.jpeg';
+import paddyhusker from '../components/assests/new4.jpeg';
+import paddy from '../components/assests/new5.jpeg';
+import ricewhitener from '../components/assests/new6.jpeg';
+import silkypolisher from '../components/assests/new7.jpeg';
+import lengthgrader from '../components/assests/new8.jpeg';
+import rice from '../components/assests/new9.jpeg';
+import paddycleaner from '../components/assests/new10.jpeg'; 
+import bucketElevator from '../components/assests/new11.jpeg';
+import flourshifter from '../components/assests/new12.jpeg';
+import VIBROCLASSIFIER from '../components/assests/new13.jpeg';
 
 const Products: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -23,103 +35,160 @@ const Products: React.FC = () => {
       id: 1,
       name: 'PRE CLEANER',
       category: 'equipment',
-      price: '₹2,50,000',
       image: img01,
-      features: ['remove unwanted straws', 'remove husk grains', 'Multi-Crop Compatibility'],
-      specifications: 'Working Width: 3-12m, Power: 80-150 HP, Precision: ±2cm'
+      features: [
+        'Removes large impurities: stalks, clods, stone fragments',
+        'Improves product quality and protects next equipment',
+        'High accuracy, low maintenance with laminated wooden frames',
+      ],
+      specifications: 'Type: Multi-stage, Frame: Laminated wood, Material: Special grade metals',
     },
     {
       id: 2,
       name: 'FINE CLEANER',
       category: 'processing',
-      price: '₹15,00,000',
-      image: img2,
-      features: ['Automated Cleaning', 'Moisture Control', 'Quality Sorting'],
-      specifications: 'Capacity: 5-50 tons/hr, Power: 200-500 HP, Efficiency: 98%'
+      image: finecleaner,
+      features: [
+        'Removes dust and small particles left after pre-cleaning',
+        'Aspiration system for precise filtering',
+        'Robust and low maintenance',
+      ],
+      specifications: 'Material: Metal sieve, Frame: Laminated wood, Output: High precision cleaning',
     },
     {
       id: 3,
       name: 'STONE SEPARATOR',
-      category: 'irrigation',
-      price: '₹75,000',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg',
-      features: ['Weather Integration', 'Soil Moisture Monitoring', 'Remote Control'],
-      specifications: 'Coverage: 100 acres, Sensors: 50+, Battery: 72hrs backup'
+      category: 'equipment',
+      image: stopesepertor,
+      features: [
+        'Separates stones, glass, and metal from seeds by density',
+        'Low noise and long life via vibro motors',
+        'Prevents rice breakage during cleaning',
+      ],
+      specifications: 'Motor: Vibro based, Tray: De-stoning tray, Function: Density-based separation',
     },
     {
       id: 4,
       name: 'PADDY HUSKER',
       category: 'storage',
-      price: '₹5,00,000',
-      image: 'https://images.pexels.com/photos/5834/nature-grass-leaf-green.jpg',
-      features: ['Temperature Control', 'Humidity Management', 'Pest Prevention'],
-      specifications: 'Capacity: 100-1000 tons, Temperature: ±1°C, Humidity: ±5%'
+      image: paddyhusker,
+      features: [
+        'Removes husk from paddy with minimal breakage',
+        'Pneumatic control for smooth hulling',
+        'Supports oats, barley, millet, sunflower seeds',
+      ],
+      specifications: 'Control: Pneumatic, Application: Multi-crop, Maintenance: Easy',
     },
     {
       id: 5,
-      name: 'PADDY & RICESEPARATOR',
+      name: 'PADDY & RICE SEPARATOR',
       category: 'equipment',
-      price: '₹25,00,000',
-      image: 'https://images.pexels.com/photos/1595104/pexels-photo-1595104.jpeg',
-      features: ['Multi-Crop Harvesting', 'GPS Mapping', 'Yield Monitoring'],
-      specifications: 'Header Width: 6-12m, Engine: 300-500 HP, Tank: 8000L'
+      image: paddy,
+      features: [
+        'Separates brown rice from paddy efficiently',
+        'Highly precise sorting',
+        'Adjustable and stable separation performance',
+      ],
+      specifications: 'Type: Gravity-based separator, Adjustment: Manual & automatic',
     },
     {
       id: 6,
       name: 'RICE WHITENER',
       category: 'quality',
-      price: '₹8,00,000',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg',
-      features: ['Nutritional Analysis', 'Contamination Detection', 'Rapid Results'],
-      specifications: 'Tests: 50+ parameters, Speed: 100 samples/hr, Accuracy: 99.9%'
+      image: ricewhitener,
+      features: [
+        'Removes bran layer producing uniform white rice',
+        'Minimum breakage and moisture loss',
+        'Mounted manometer for pressure control',
+      ],
+      specifications: 'Applicable Rice Types: Raw, parboiled, steamed, Control: Chamber pressure via manometer',
     },
     {
       id: 7,
-      name: 'RICE WHITENER',
+      name: 'SILKY POLISHER',
       category: 'quality',
-      price: '₹8,00,000',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg',
-      features: ['Nutritional Analysis', 'Contamination Detection', 'Rapid Results'],
-      specifications: 'Tests: 50+ parameters, Speed: 100 samples/hr, Accuracy: 99.9%'
+      image: silkypolisher,
+      features: [
+        'Smooth shiny finish with water spray',
+        'Dust removal system with less energy use',
+        'Humidity control ensures perfect polish',
+      ],
+      specifications: 'Operation: Water spray, Humidity: Controlled, Energy: Low consumption',
     },
     {
       id: 8,
-      name: 'RICE WHITENER',
+      name: 'LENGTH GRADER',
       category: 'quality',
-      price: '₹8,00,000',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg',
-      features: ['Nutritional Analysis', 'Contamination Detection', 'Rapid Results'],
-      specifications: 'Tests: 50+ parameters, Speed: 100 samples/hr, Accuracy: 99.9%'
+      image: lengthgrader,
+      features: [
+        'Separates head rice from broken grains',
+        'Rotating design for efficient sorting',
+        'Uses hardened SS screens to avoid clogging',
+      ],
+      specifications: 'Screen: Stainless steel, Speed: Adjustable, Maintenance: Low',
     },
     {
       id: 9,
-      name: 'RICE WHITENER',
+      name: 'RICE THICKNESS GRADER',
       category: 'quality',
-      price: '₹8,00,000',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg',
-      features: ['Nutritional Analysis', 'Contamination Detection', 'Rapid Results'],
-      specifications: 'Tests: 50+ parameters, Speed: 100 samples/hr, Accuracy: 99.9%'
+      image: rice,
+      features: [
+        'Classifies rice based on thickness',
+        'Enhances rice uniformity and quality',
+        'Used for de-hulling barley, sunflower, etc.',
+      ],
+      specifications: 'Control: Pneumatic, Accuracy: High, Shelling: High degree',
     },
     {
       id: 10,
-      name: 'RICE WHITENER',
+      name: 'PADDY CLEANER',
       category: 'quality',
-      price: '₹8,00,000',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg',
-      features: ['Nutritional Analysis', 'Contamination Detection', 'Rapid Results'],
-      specifications: 'Tests: 50+ parameters, Speed: 100 samples/hr, Accuracy: 99.9%'
+      image: paddycleaner,
+      features: [
+        'Removes fine impurities after pre-cleaning',
+        'Top drum for strings, husk; enclosed sieves for dust-free operation',
+        'Effective dust aspiration system',
+      ],
+      specifications: 'Screens: Easily removable, Dust control: Fully enclosed, Operation: Reliable',
     },
     {
       id: 11,
-      name: 'RICE WHITENER',
-      category: 'quality',
-      price: '₹8,00,000',
-      image: 'https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg',
-      features: ['Nutritional Analysis', 'Contamination Detection', 'Rapid Results'],
-      specifications: 'Tests: 50+ parameters, Speed: 100 samples/hr, Accuracy: 99.9%'
+      name: 'BUCKET ELEVATOR',
+      category: 'equipment',
+      image: bucketElevator,
+      features: [
+        'Efficiently conveys bulk materials like grains & fertilizers',
+        'Belt bucket elevator for vertical lifting',
+        'Reduces spillage, high-capacity transport',
+      ],
+      specifications: 'Type: Belt bucket, Operation: Easy, Use: Vertical bulk transport',
+    },
+    {
+      id: 12,
+      name: 'FLOUR SHIFTER',
+      category: 'equipment',
+      image: flourshifter,
+      features: [
+        'It has high strength and stability and performs well in harsh industrial environments',
+        'Belt bucket elevator for vertical lifting',
+        'maintains the consistency and texture of the product.',
+      ],
+      specifications: ' separate various impurities in flour Operation: Easy, Use: Vertical bulk transport',
+    },
+    {
+      id: 13,
+      name: 'VIBRO CLASSIFIER',
+      category: 'equipment',
+      image: VIBROCLASSIFIER,
+      features: [
+        'Adjustable screen angle for better performance',
+        'Vibrating screen cleaning method Fully enclosed body for dust-free operation',
+        'Low maintenance and high accuracy.',
+      ],
+      specifications: 'Vibrating screen cleaning method, Operation: Easy, Use: Vertical bulk transport',
     }
-
   ];
+  
 
   const filteredProducts = products.filter(product => {
     const matchesCategory = activeCategory === 'all' || product.category === activeCategory;
@@ -191,11 +260,12 @@ const Products: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div className="relative">
+                <div className="relative group bg-gray-100 flex items-center justify-center h-48 overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute top-4 right-4 bg-primary-green text-white px-3 py-1 rounded-full text-sm font-medium font-opensans">
                     {categories.find(cat => cat.id === product.category)?.name.split(' ')[0]}
@@ -207,9 +277,7 @@ const Products: React.FC = () => {
                     {product.name}
                   </h3>
                   
-                  <p className="font-opensans text-2xl font-bold text-primary-brown mb-4">
-                    {product.price}
-                  </p>
+                
 
                   <div className="mb-4">
                     <h4 className="font-opensans font-semibold text-gray-800 mb-2">Key Features:</h4>

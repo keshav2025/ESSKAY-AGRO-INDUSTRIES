@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Globe, Clock, Send, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -22,10 +24,32 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-   
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+  
+  
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formData,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+      .then(() => {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          inquiryType: '',
+          message: ''
+        });
+        setTimeout(() => setIsSubmitted(false), 3000);
+      })
+      .catch((error) => {
+        console.error('Email sending error:', error);
+        alert('Failed to send. Please try again later.');
+      });
   };
+  
 
   const contactInfo = [
     {
@@ -54,10 +78,7 @@ const Contact: React.FC = () => {
       icon: Mail,
       title: 'Email Addresses',
       details: [
-        'esskayagrosales@gmail.com',
-        'sales@esskayagro.com',
-        'support@esskayagro.com',
-        'exports@esskayagro.com'
+        'esskayagroindustries@gmail.com'
       ]
     },
     {
@@ -277,24 +298,14 @@ const Contact: React.FC = () => {
               ))}
 
               {/* Social Media */}
-              <div className="bg-white p-6 rounded-xl shadow-lg">
+              {/* <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary-green bg-opacity-10 p-3 rounded-lg">
                     <Globe className="h-6 w-6 text-primary-green" />
                   </div>
-                  <div>
-                    <h3 className="font-montserrat font-semibold text-xl text-primary-green mb-3">
-                      Follow Us
-                    </h3>
-                    <div className="space-y-2">
-                      <p className="font-opensans text-gray-600">LinkedIn: @esskayagro</p>
-                      <p className="font-opensans text-gray-600">Twitter: @esskayagro</p>
-                      <p className="font-opensans text-gray-600">Facebook: ESSKAY AGRO Industries</p>
-                      <p className="font-opensans text-gray-600">YouTube: ESSKAY AGRO Channel</p>
-                    </div>
-                  </div>
+                 
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -364,11 +375,11 @@ const Contact: React.FC = () => {
               <span>Emergency Hotline: +919971074753</span>
             </a>
             <a
-              href="mailto:esskayagrosales@gmail.com"
+              href="mailto:esskayagroindustries@gmail.com"
               className="border-2 border-red-600 text-red-600 px-6 py-3 rounded-lg font-medium font-opensans hover:bg-red-600 hover:text-white transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <Mail className="h-5 w-5" />
-              <span>esskayagrosales@gmail.com</span>
+              <span>esskayagroindustries@gmail.com</span>
             </a>
           </div>
         </div>

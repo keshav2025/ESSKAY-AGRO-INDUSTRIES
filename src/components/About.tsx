@@ -41,26 +41,26 @@ const About: React.FC = () => {
     'Agricultural Equipment Certification'
   ];
 
-  const teamMembers = [
-    {
-      name: 'Rajendra Kumar',
-      position: 'Managing Director',
-      experience: '23+ years',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg'
-    },
-    {
-      name: 'Priya Sharma',
-      position: 'Head of Operations',
-      experience: '20+ years',
-      image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg'
-    },
-    {
-      name: 'Rajesh Patel',
-      position: 'Chief Technology Officer',
-      experience: '18+ years',
-      image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg'
-    }
-  ];
+  // const teamMembers = [
+  //   {
+  //     name: 'Rajendra Kumar',
+  //     position: 'Managing Director',
+  //     experience: '23+ years',
+  //     image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg'
+  //   },
+  //   {
+  //     name: 'Priya Sharma',
+  //     position: 'Head of Operations',
+  //     experience: '20+ years',
+  //     image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg'
+  //   },
+  //   {
+  //     name: 'Rajesh Patel',
+  //     position: 'Chief Technology Officer',
+  //     experience: '18+ years',
+  //     image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg'
+  //   }
+  // ];
 
   return (
     <div className="bg-primary-offwhite min-h-screen pt-16">
@@ -280,7 +280,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      
+{/*       
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -290,9 +290,9 @@ const About: React.FC = () => {
             <p className="font-opensans text-xl text-gray-600">
               Experienced professionals driving agricultural innovation
             </p>
-          </div>
+          </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center">
                 <img
@@ -311,9 +311,9 @@ const About: React.FC = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div> */}
+        {/* </div>
+      </section> */}
     </div>
   );
 };
