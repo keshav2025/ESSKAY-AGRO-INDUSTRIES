@@ -3,11 +3,11 @@ import { ChevronRight, CheckCircle, ArrowRight, Download } from 'lucide-react';
 
 const Applications: React.FC = () => {
   const [activeCase, setActiveCase] = useState(0);
-
   const industries = [
     {
       title: 'Crop Production',
       description: 'Comprehensive solutions for large-scale crop cultivation',
+      details: 'Our crop production solutions include advanced analytics, real-time monitoring, and expert agronomy support to maximize yields and minimize resource use. We help you implement sustainable practices and leverage the latest technology for every stage of the crop cycle.',
       image: 'https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg',
       solutions: [
         'Precision Seeding Systems',
@@ -19,6 +19,7 @@ const Applications: React.FC = () => {
     {
       title: 'Food Processing',
       description: 'Advanced processing equipment for food manufacturers',
+      details: 'From grain cleaning to packaging, our food processing solutions ensure quality, efficiency, and compliance with industry standards. We offer end-to-end automation and traceability for food safety and operational excellence.',
       image: 'https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg',
       solutions: [
         'Grain Processing',
@@ -30,6 +31,7 @@ const Applications: React.FC = () => {
     {
       title: 'Dairy Farming',
       description: 'Modern dairy solutions for efficient milk production',
+      details: 'Our dairy farming solutions include automated milking, animal health monitoring, and feed optimization. We help you improve milk yield, quality, and animal welfare with the latest technology and best practices.',
       image: 'https://images.pexels.com/photos/422202/pexels-photo-422202.jpeg',
       solutions: [
         'Automated Milking',
@@ -41,6 +43,7 @@ const Applications: React.FC = () => {
     {
       title: 'Organic Farming',
       description: 'Sustainable solutions for organic agriculture',
+      details: 'We support organic farmers with eco-friendly inputs, pest management, and certification guidance. Our solutions help you maintain soil health, increase biodiversity, and meet organic standards for premium market access.',
       image: 'https://images.pexels.com/photos/533360/pexels-photo-533360.jpeg',
       solutions: [
         'Organic Fertilization',
@@ -50,6 +53,7 @@ const Applications: React.FC = () => {
       ]
     }
   ];
+  const [expanded, setExpanded] = useState(Array(industries.length).fill(false));
 
   const caseStudies = [
     {
@@ -121,6 +125,14 @@ const Applications: React.FC = () => {
     }
   ];
 
+  const handleToggle = (index: number) => {
+    setExpanded(prev => {
+      const updated = [...prev];
+      updated[index] = !updated[index];
+      return updated;
+    });
+  };
+
   return (
     <div className="bg-primary-offwhite min-h-screen pt-16">
       {/* Hero Section */}
@@ -167,6 +179,9 @@ const Applications: React.FC = () => {
                 <div className="p-6">
                   <p className="font-opensans text-gray-600 mb-4">
                     {industry.description}
+                    {expanded[index] && (
+                      <span className="block mt-2 text-gray-700">{industry.details}</span>
+                    )}
                   </p>
 
                   <div className="space-y-2 mb-6">
@@ -178,9 +193,12 @@ const Applications: React.FC = () => {
                     ))}
                   </div>
 
-                  <button className="bg-primary-green text-white px-6 py-3 rounded-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200 flex items-center space-x-2">
-                    <span>Learn More</span>
-                    <ChevronRight className="h-4 w-4" />
+                  <button
+                    className="bg-primary-green text-white px-6 py-3 rounded-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200 flex items-center space-x-2 focus:outline-none"
+                    onClick={() => handleToggle(index)}
+                  >
+                    <span>{expanded[index] ? 'Show Less' : 'Learn More'}</span>
+                    <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${expanded[index] ? 'rotate-90' : ''}`} />
                   </button>
                 </div>
               </div>

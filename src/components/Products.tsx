@@ -299,17 +299,18 @@ const Products: React.FC = () => {
                   </div>
 
                   <div className="flex gap-2">
-                    <button className="flex-1 bg-primary-green text-white py-2 px-4 rounded-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200 flex items-center justify-center space-x-2">
-                      <Phone className="h-4 w-4" />
-                      <span>Inquire</span>
-                    </button>
+                    <a href="tel:+919971074753" className="flex-1">
+                      <button className="w-full bg-primary-green text-white py-2 px-4 rounded-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200 flex items-center justify-center space-x-2">
+                        <Phone className="h-4 w-4" />
+                        <span>Inquire</span>
+                      </button>
+                    </a>
                     <a href="/brochure.pdf" download>
-  <button className="bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200 flex items-center space-x-2">
-    <Download className="h-4 w-4" />
-    <span>Download</span>
-  </button>
-</a>
-
+                      <button className="bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-200 flex items-center space-x-2">
+                        <Download className="h-4 w-4" />
+                        <span>Download</span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -336,14 +337,20 @@ const Products: React.FC = () => {
             Our team of experts can design and manufacture custom agricultural equipment tailored to your specific requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary-green px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-              <Phone className="h-5 w-5" />
-              <span>Call Now</span>
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-white hover:text-primary-green transition-colors duration-200 flex items-center justify-center space-x-2">
-              <Mail className="h-5 w-5" />
-              <span>Email Us</span>
-            </button>
+            <a href="tel:+919971074753">
+              <button className="bg-white text-primary-green px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+                <Phone className="h-5 w-5" />
+                <span>Call Now</span>
+              </button>
+            </a>
+            <a
+  href="mailto:esskayagroindustries@gmail.com"
+  className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-medium font-opensans hover:bg-white hover:text-primary-green transition-colors duration-200 flex items-center justify-center space-x-2"
+>
+  <Mail className="h-5 w-5" />
+  <span>Email Us</span>
+</a>
+
           </div>
         </div>
       </section>

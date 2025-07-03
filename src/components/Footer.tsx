@@ -136,28 +136,7 @@ const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
       </div>
 
      
-      <div className="bg-primary-brown bg-opacity-20 border-t border-white border-opacity-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-4 md:mb-0">
-              <h3 className="font-montserrat font-bold text-xl mb-2">Stay Updated</h3>
-              <p className="font-opensans text-white text-opacity-90">
-                Subscribe to our newsletter for the latest agricultural insights and product updates
-              </p>
-            </div>
-            <div className="flex w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 md:w-80 px-4 py-3 rounded-l-lg border-0 focus:ring-2 focus:ring-secondary-wheat font-opensans"
-              />
-              <button className="bg-secondary-wheat text-primary-green px-6 py-3 rounded-r-lg font-medium font-opensans hover:bg-opacity-90 transition-colors duration-200">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
     
       <div className="bg-black bg-opacity-20 border-t border-white border-opacity-10">

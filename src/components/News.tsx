@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar, ArrowRight } from 'lucide-react';
 
 const News: React.FC = () => {
@@ -6,6 +6,7 @@ const News: React.FC = () => {
     {
       title: "India's Summer Sowing 2025: Record Increase in Crop Area",
       excerpt: "The area under summer crops in India has increased by 6.5 lakh hectares over last year, with rice and pulses seeing the biggest gains.",
+      details: "This record increase is attributed to favorable monsoon conditions and government incentives for farmers. Experts believe this trend will continue, leading to higher food security and better income for rural communities. The government is also focusing on sustainable practices to ensure long-term productivity.",
       date: "2025-03-12",
       category: "Crop Trends",
       image: "https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg" // Indian rice field
@@ -13,6 +14,7 @@ const News: React.FC = () => {
     {
       title: "ICAR to Launch Two Genome Edited Rice Varieties",
       excerpt: "The Indian Council of Agricultural Research is set to launch two new rice varieties developed using genome editing, promising higher yields and climate resilience.",
+      details: "These new rice varieties are expected to help farmers cope with changing climate patterns and reduce dependency on chemical fertilizers. The varieties have undergone extensive field trials and have shown promising results in terms of yield and disease resistance.",
       date: "2025-05-04",
       category: "Innovation",
       image: "https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg" // Scientist in field
@@ -20,11 +22,22 @@ const News: React.FC = () => {
     {
       title: "AI and Technology Transforming Indian Farms",
       excerpt: "Indian farmers are increasingly adopting AI-powered tools for efficient water, fertilizer, and pest management, boosting productivity and sustainability.",
+      details: "With the integration of AI, farmers can now monitor crop health in real-time, predict weather patterns, and optimize resource usage. This technological shift is making Indian agriculture more resilient and profitable, attracting younger generations to farming.",
       date: "2025-02-07",
       category: "Technology",
       image: "https://images.pexels.com/photos/5029856/pexels-photo-5029856.jpeg" // Smart farming/AI
     }
   ];
+
+  const [expanded, setExpanded] = useState(Array(newsItems.length).fill(false));
+
+  const handleToggle = (index: number) => {
+    setExpanded(prev => {
+      const updated = [...prev];
+      updated[index] = !updated[index];
+      return updated;
+    });
+  };
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -78,12 +91,18 @@ const News: React.FC = () => {
                 
                 <p className="font-opensans text-gray-600 mb-4 leading-relaxed">
                   {item.excerpt}
+                  {expanded[index] && (
+                    <span className="block mt-2 text-gray-700">{item.details}</span>
+                  )}
                 </p>
                 
-                <div className="flex items-center text-primary-green font-opensans font-medium group-hover:text-primary-brown transition-colors duration-200">
-                  <span>Read More</span>
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                </div>
+                <button
+                  className="flex items-center text-primary-green font-opensans font-medium group-hover:text-primary-brown transition-colors duration-200 focus:outline-none"
+                  onClick={() => handleToggle(index)}
+                >
+                  <span>{expanded[index] ? 'Show Less' : 'Read More'}</span>
+                  <ArrowRight className={`h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200 ${expanded[index] ? 'rotate-180' : ''}`} />
+                </button>
               </div>
             </article>
           ))}
